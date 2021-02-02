@@ -3,21 +3,23 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["airbnb-base", "prettier"],
-  ignorePatterns: ["public/build"],
-  parser: "@typescript-eslint/parser",
+  extends: ['airbnb-base', 'prettier'],
+  ignorePatterns: ['public/build'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2019,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["@typescript-eslint", "svelte3", "prettier"],
-  overrides: [
-    {
-      files: ["*.svelte"],
-      processor: "svelte3/svelte3",
-    },
-  ],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    quotes: ["error", "single"],
+    quotes: ['error', 'single'],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        printWidth: 120,
+        trailingComma: 'all',
+      },
+    ],
   },
 };
