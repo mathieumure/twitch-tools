@@ -1,21 +1,21 @@
 <script lang="ts">
-	import Widget from './modules/tooltip/Tooltip.svelte';
+  import Widget from './modules/tooltip/Tooltip.svelte';
 </script>
 
 <header>
-	<Widget />
+  <Widget />
 </header>
 
-<main></main>
+<main />
 
 <style>
-	header {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-	main {
-		width: 100%;
-	}
+  main {
+    width: 100%;
+  }
 </style>
