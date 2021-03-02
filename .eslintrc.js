@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: ['prettier'],
   ignorePatterns: ['public/build'],
@@ -10,7 +11,7 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: 'module',
   },
-  plugins: ['svelte3', '@typescript-eslint'],
+  plugins: ['svelte3', '@typescript-eslint', 'jest'],
   overrides: [
     {
       files: ['*.svelte'],
@@ -22,7 +23,7 @@ module.exports = {
       },
     },
     {
-      files: ['.eslintrc.js', '.prettierrc.js'],
+      files: ['.eslintrc.js', '.prettierrc.js', 'jest-setup.ts'],
       rules: {
         'global-require': ['off'],
         'import/no-extraneous-dependencies': ['off'],
